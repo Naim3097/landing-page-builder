@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Brief - Axtra Landing Pages</title>
+  
+  <link rel="stylesheet" href="assets/css/design-tokens.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/builder.css">
+</head>
+<body>
+  
+  <div class="builder-container">
+    
+    <header class="builder-header">
+      <div class="builder-header-content">
+        <div class="builder-logo">Axtra Landing Pages</div>
+        <a href="index.html" class="btn btn-secondary btn-sm">← New Project</a>
+      </div>
+    </header>
+
+    <main class="result-container">
+      
+      <div class="result-header">
+        <h1 class="result-title">✅ Project Brief Submitted!</h1>
+        <p class="result-subtitle">Thank you! Our design team has received your detailed project brief and will start working on your custom landing page.</p>
+      </div>
+
+      <div class="result-actions">
+        <button class="btn btn-accent btn-lg" onclick="copyToClipboard()">📋 Copy Project Brief</button>
+        <button class="btn btn-primary" onclick="downloadPrompt()">💾 Download as PDF</button>
+        <button class="btn btn-secondary" onclick="window.print()">🖨️ Print</button>
+      </div>
+
+      <div style="background: var(--color-surface); border-radius: var(--radius-xl); padding: var(--space-6); margin-bottom: var(--space-6); border-left: 4px solid var(--color-accent);">
+        <h3 style="font-size: var(--text-lg); font-weight: var(--font-semibold); margin-bottom: var(--space-3);">📧 What Happens Next?</h3>
+        <ul style="color: var(--color-text-secondary); line-height: var(--leading-relaxed); padding-left: var(--space-5);">
+          <li>Our team will review your project brief within 24 hours</li>
+          <li>We'll email you with any clarifying questions (if needed)</li>
+          <li>Your custom landing page will be designed and delivered in 3-5 business days</li>
+          <li>You'll receive the complete files ready to deploy on your website</li>
+        </ul>
+      </div>
+
+      <h3 style="font-size: var(--text-xl); font-weight: var(--font-semibold); margin-bottom: var(--space-4); color: var(--color-text-primary);">Your Complete Project Brief:</h3>
+
+      <div class="prompt-preview" id="prompt-output">
+        <!-- Prompt content will be inserted here -->
+      </div>
+
+    </main>
+
+  </div>
+
+  <script>
+    // Load and display the generated prompt
+    document.addEventListener('DOMContentLoaded', () => {
+      const prompt = localStorage.getItem('generatedPrompt');
+      const promptOutput = document.getElementById('prompt-output');
+      
+      if (prompt) {
+        promptOutput.textContent = prompt;
+      } else {
+        promptOutput.innerHTML = '<p style="color: var(--color-error);">No project brief found. Please go back and complete the form.</p>';
+      }
+    });
+
+    // Copy to clipboard
+    function copyToClipboard() {
+      const prompt = localStorage.getItem('generatedPrompt');
+      
+      if (!prompt) {
+        alert('No project brief to copy');
+        return;
+      }
+      
+      navigator.clipboard.writeText(prompt).then(() => {
+        // Show success notification
+        const notification = document.createElement('div');
+        notification.className = 'copy-success';
+        notification.textContent = '✓ Project brief copied to clipboard!';
+        document.body.appendChild(notification);
+        
+        setTimeout(() => {
+          notification.remove();
+        }, 3000);
+      }).catch(err => {
+        console.error('Failed to copy:', err);
+        alert('Failed to copy to clipboard');
+      });
+    }
+
+    // Download as markdown file
+    function downloadPrompt() {
+      const prompt = localStorage.getItem('generatedPrompt');
+      const formData = JSON.parse(localStorage.getItem('formData') || '{}');
+      
+      if (!prompt) {
+        alert('No project brief to download');
+        return;
+      }
+      
+      // Create filename
+      const businessName = formData.businessName || 'landing-page';
+      const filename = `${businessName.toLowerCase().replace(/\s+/g, '-')}-project-brief.md`;
+      
+      // Create blob and download
+      const blob = new Blob([prompt], { type: 'text/markdown' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+  </script>
+  
+</body>
+</html>

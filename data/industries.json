@@ -1,0 +1,137 @@
+{
+  "industries": [
+    {
+      "id": "saas",
+      "name": "SaaS & Software",
+      "description": "Software as a Service, B2B tools, cloud platforms",
+      "competitors": [
+        { "name": "Stripe", "url": "https://stripe.com", "style": "Minimal, developer-focused" },
+        { "name": "Notion", "url": "https://notion.so", "style": "Clean, productivity-focused" },
+        { "name": "Slack", "url": "https://slack.com", "style": "Colorful, team-oriented" },
+        { "name": "Linear", "url": "https://linear.app", "style": "Dark, sophisticated" },
+        { "name": "Vercel", "url": "https://vercel.com", "style": "Technical, minimal" }
+      ],
+      "commonComponents": ["hero", "features-grid", "pricing-table", "testimonials", "integrations", "cta"],
+      "keywords": ["automation", "productivity", "collaboration", "cloud", "API"]
+    },
+    {
+      "id": "ecommerce",
+      "name": "E-commerce & Retail",
+      "description": "Online stores, product sales, retail brands",
+      "competitors": [
+        { "name": "Shopify", "url": "https://shopify.com", "style": "Bold, conversion-focused" },
+        { "name": "Warby Parker", "url": "https://warbyparker.com", "style": "Lifestyle, visual" },
+        { "name": "Allbirds", "url": "https://allbirds.com", "style": "Sustainable, minimal" },
+        { "name": "Glossier", "url": "https://glossier.com", "style": "Beauty, aspirational" }
+      ],
+      "commonComponents": ["hero-banner", "product-showcase", "benefits", "social-proof", "urgency-timer", "cta"],
+      "keywords": ["shop", "buy", "products", "discount", "quality"]
+    },
+    {
+      "id": "education",
+      "name": "Education & E-Learning",
+      "description": "Online courses, training platforms, educational content",
+      "competitors": [
+        { "name": "Coursera", "url": "https://coursera.org", "style": "Academic, trustworthy" },
+        { "name": "Masterclass", "url": "https://masterclass.com", "style": "Premium, video-focused" },
+        { "name": "Duolingo", "url": "https://duolingo.com", "style": "Playful, gamified" },
+        { "name": "Skillshare", "url": "https://skillshare.com", "style": "Creative, community" }
+      ],
+      "commonComponents": ["hero", "course-preview", "instructor-bio", "curriculum", "testimonials", "pricing", "faq"],
+      "keywords": ["learn", "courses", "skills", "certification", "training"]
+    },
+    {
+      "id": "finance",
+      "name": "Finance & Fintech",
+      "description": "Banking, payments, investment, financial services",
+      "competitors": [
+        { "name": "Robinhood", "url": "https://robinhood.com", "style": "Bold, accessible" },
+        { "name": "Revolut", "url": "https://revolut.com", "style": "Modern, feature-rich" },
+        { "name": "Coinbase", "url": "https://coinbase.com", "style": "Trust-focused, educational" },
+        { "name": "Wise", "url": "https://wise.com", "style": "Transparent, value-driven" }
+      ],
+      "commonComponents": ["hero", "trust-indicators", "features", "security", "how-it-works", "pricing", "cta"],
+      "keywords": ["secure", "trusted", "financial", "investment", "savings"]
+    },
+    {
+      "id": "healthcare",
+      "name": "Healthcare & Wellness",
+      "description": "Medical services, wellness apps, health tech",
+      "competitors": [
+        { "name": "Calm", "url": "https://calm.com", "style": "Peaceful, wellness" },
+        { "name": "Headspace", "url": "https://headspace.com", "style": "Friendly, approachable" },
+        { "name": "Hims", "url": "https://forhims.com", "style": "Direct, modern" },
+        { "name": "ZocDoc", "url": "https://zocdoc.com", "style": "Professional, helpful" }
+      ],
+      "commonComponents": ["hero", "benefits", "how-it-works", "testimonials", "trust-badges", "cta"],
+      "keywords": ["health", "wellness", "care", "medical", "therapy"]
+    },
+    {
+      "id": "marketing",
+      "name": "Marketing & Agency",
+      "description": "Marketing agencies, creative studios, consulting",
+      "competitors": [
+        { "name": "Mailchimp", "url": "https://mailchimp.com", "style": "Playful, creative" },
+        { "name": "HubSpot", "url": "https://hubspot.com", "style": "Professional, comprehensive" },
+        { "name": "Webflow", "url": "https://webflow.com", "style": "Designer-focused, bold" }
+      ],
+      "commonComponents": ["hero", "portfolio", "services", "case-studies", "process", "team", "contact"],
+      "keywords": ["growth", "marketing", "creative", "strategy", "results"]
+    },
+    {
+      "id": "realestate",
+      "name": "Real Estate & Property",
+      "description": "Property listings, real estate services, rentals",
+      "competitors": [
+        { "name": "Zillow", "url": "https://zillow.com", "style": "Data-driven, visual" },
+        { "name": "Airbnb", "url": "https://airbnb.com", "style": "Experiential, photo-rich" },
+        { "name": "Redfin", "url": "https://redfin.com", "style": "Modern, tech-forward" }
+      ],
+      "commonComponents": ["hero-search", "featured-properties", "benefits", "how-it-works", "testimonials", "cta"],
+      "keywords": ["property", "home", "location", "investment", "neighborhood"]
+    },
+    {
+      "id": "nonprofit",
+      "name": "Non-Profit & Charity",
+      "description": "Charitable organizations, social causes, fundraising",
+      "competitors": [
+        { "name": "Charity: Water", "url": "https://charitywater.org", "style": "Story-driven, emotional" },
+        { "name": "The Ocean Cleanup", "url": "https://theoceancleanup.com", "style": "Mission-focused, visual" }
+      ],
+      "commonComponents": ["hero", "mission-statement", "impact-stats", "stories", "donation-form", "cta"],
+      "keywords": ["donate", "impact", "mission", "community", "cause"]
+    },
+    {
+      "id": "tech",
+      "name": "Technology & Innovation",
+      "description": "Tech startups, innovation, emerging technology",
+      "competitors": [
+        { "name": "OpenAI", "url": "https://openai.com", "style": "Futuristic, technical" },
+        { "name": "SpaceX", "url": "https://spacex.com", "style": "Bold, visionary" },
+        { "name": "Tesla", "url": "https://tesla.com", "style": "Sleek, product-focused" }
+      ],
+      "commonComponents": ["hero", "technology-showcase", "features", "vision", "press", "cta"],
+      "keywords": ["innovation", "technology", "future", "breakthrough", "advanced"]
+    },
+    {
+      "id": "food",
+      "name": "Food & Beverage",
+      "description": "Restaurants, food delivery, culinary services",
+      "competitors": [
+        { "name": "DoorDash", "url": "https://doordash.com", "style": "Appetite-driven, visual" },
+        { "name": "Blue Apron", "url": "https://blueapron.com", "style": "Lifestyle, recipe-focused" },
+        { "name": "Sweetgreen", "url": "https://sweetgreen.com", "style": "Fresh, health-conscious" }
+      ],
+      "commonComponents": ["hero-image", "menu-showcase", "benefits", "ordering", "locations", "cta"],
+      "keywords": ["fresh", "delicious", "quality", "local", "menu"]
+    },
+    {
+      "id": "other",
+      "name": "Other / Custom",
+      "description": "Industries not listed above",
+      "competitors": [],
+      "commonComponents": ["hero", "features", "benefits", "testimonials", "cta"],
+      "keywords": []
+    }
+  ]
+}

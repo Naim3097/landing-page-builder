@@ -1,0 +1,194 @@
+{
+  "landingPageComponents": [
+    {
+      "id": "hero",
+      "name": "Hero Section",
+      "description": "Primary above-the-fold section with headline and CTA",
+      "required": true,
+      "variants": [
+        "Simple centered",
+        "Split with image",
+        "Full background video",
+        "Animated gradient",
+        "Product showcase"
+      ],
+      "typicalContent": ["Main headline", "Subheadline", "Primary CTA", "Secondary CTA (optional)", "Hero image/video"]
+    },
+    {
+      "id": "features",
+      "name": "Features Section",
+      "description": "Highlight key features or benefits",
+      "required": false,
+      "variants": [
+        "3-column grid",
+        "4-column grid",
+        "Alternating rows",
+        "Icon-based list",
+        "Card layout"
+      ],
+      "typicalContent": ["Feature title", "Description", "Icon or image", "Optional link"]
+    },
+    {
+      "id": "benefits",
+      "name": "Benefits Section",
+      "description": "Explain value propositions and benefits",
+      "required": false,
+      "variants": [
+        "Two-column with images",
+        "Single column detailed",
+        "Icon-based grid",
+        "Comparison table"
+      ],
+      "typicalContent": ["Benefit headline", "Description", "Supporting visual", "Data/proof points"]
+    },
+    {
+      "id": "how-it-works",
+      "name": "How It Works",
+      "description": "Step-by-step process or explanation",
+      "required": false,
+      "variants": [
+        "Numbered steps",
+        "Timeline",
+        "Visual flowchart",
+        "Video walkthrough"
+      ],
+      "typicalContent": ["Step number/title", "Description", "Visual", "CTA to next step"]
+    },
+    {
+      "id": "testimonials",
+      "name": "Testimonials/Social Proof",
+      "description": "Customer reviews, ratings, case studies",
+      "required": false,
+      "variants": [
+        "Carousel",
+        "Grid layout",
+        "Featured testimonial",
+        "Video testimonials",
+        "Rating stars with quotes"
+      ],
+      "typicalContent": ["Customer quote", "Name and title", "Company logo", "Photo", "Rating"]
+    },
+    {
+      "id": "pricing",
+      "name": "Pricing Table",
+      "description": "Product pricing and plan comparison",
+      "required": false,
+      "variants": [
+        "3-tier cards",
+        "Comparison table",
+        "Single plan focus",
+        "Usage-based calculator"
+      ],
+      "typicalContent": ["Plan name", "Price", "Features list", "CTA button", "Popular badge"]
+    },
+    {
+      "id": "cta",
+      "name": "Call-to-Action Section",
+      "description": "Final conversion section",
+      "required": true,
+      "variants": [
+        "Simple centered",
+        "Banner style",
+        "Two-column",
+        "Full-width colored"
+      ],
+      "typicalContent": ["Compelling headline", "Supporting text", "Primary CTA", "Trust indicators"]
+    },
+    {
+      "id": "faq",
+      "name": "FAQ Section",
+      "description": "Frequently asked questions",
+      "required": false,
+      "variants": [
+        "Accordion",
+        "Two-column",
+        "Categorized tabs",
+        "Search-enabled"
+      ],
+      "typicalContent": ["Question", "Answer", "Optional link to more info"]
+    },
+    {
+      "id": "logos",
+      "name": "Logo Strip/Social Proof",
+      "description": "Display partner or client logos",
+      "required": false,
+      "variants": [
+        "Single row",
+        "Scrolling carousel",
+        "Grid layout"
+      ],
+      "typicalContent": ["Company logos", "Optional headline", "Social proof metrics"]
+    },
+    {
+      "id": "stats",
+      "name": "Statistics Section",
+      "description": "Key metrics and achievements",
+      "required": false,
+      "variants": [
+        "4-column grid",
+        "Large numbers centered",
+        "Animated counters"
+      ],
+      "typicalContent": ["Metric number", "Label", "Icon", "Optional description"]
+    },
+    {
+      "id": "team",
+      "name": "Team Section",
+      "description": "Introduce team members",
+      "required": false,
+      "variants": [
+        "Grid of photos",
+        "Carousel",
+        "Founder focus"
+      ],
+      "typicalContent": ["Photo", "Name", "Title", "Bio", "Social links"]
+    },
+    {
+      "id": "form",
+      "name": "Lead Capture Form",
+      "description": "Collect visitor information",
+      "required": false,
+      "variants": [
+        "Simple email only",
+        "Multi-field",
+        "Multi-step",
+        "Quiz/survey format"
+      ],
+      "typicalContent": ["Form fields", "Submit button", "Privacy notice", "Success message"]
+    },
+    {
+      "id": "comparison",
+      "name": "Comparison Table",
+      "description": "Compare your product vs competitors",
+      "required": false,
+      "variants": [
+        "Side-by-side table",
+        "Feature checkmarks",
+        "Before/after"
+      ],
+      "typicalContent": ["Feature rows", "Product columns", "Checkmarks/X marks", "CTA"]
+    },
+    {
+      "id": "media",
+      "name": "Media Section",
+      "description": "Press mentions, awards, recognition",
+      "required": false,
+      "variants": [
+        "Press logos",
+        "Article excerpts",
+        "Awards display"
+      ],
+      "typicalContent": ["Publication logos", "Quotes", "Links to articles"]
+    }
+  ],
+  "objectiveComponentMap": {
+    "lead-generation": ["hero", "benefits", "form", "testimonials", "trust-logos", "cta"],
+    "sales": ["hero", "features", "benefits", "pricing", "testimonials", "faq", "cta"],
+    "webinar": ["hero", "benefits", "how-it-works", "speaker-bio", "testimonials", "form", "countdown"],
+    "product-launch": ["hero", "features", "demo-video", "pricing", "early-bird", "faq", "cta"],
+    "awareness": ["hero", "problem-solution", "stats", "testimonials", "media", "cta"],
+    "signup": ["hero", "benefits", "how-it-works", "social-proof", "simple-form", "cta"],
+    "download": ["hero", "features", "benefits", "testimonials", "download-form", "cta"],
+    "event": ["hero", "event-details", "speakers", "agenda", "testimonials", "registration-form"]
+  }
+}
