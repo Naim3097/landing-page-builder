@@ -174,18 +174,28 @@
 
             <div class="form-group hidden" id="brand-colors-section">
               <label class="form-label">Brand Colors</label>
+              <span class="form-help mb-4">Enter your brand color codes (e.g., #FF5733 or rgb(255, 87, 51))</span>
               <div class="flex gap-4" style="flex-wrap: wrap;">
                 <div style="flex: 1; min-width: 150px;">
-                  <label class="form-label" for="primaryColor">Primary</label>
-                  <input type="color" class="form-input" id="primaryColor" name="primaryColor" value="#1a1a1a">
+                  <label class="form-label" for="primaryColor">Primary Color</label>
+                  <div style="display: flex; gap: var(--space-2); align-items: center;">
+                    <input type="text" class="form-input" id="primaryColorText" name="primaryColorText" placeholder="#1a1a1a" value="#1a1a1a" style="flex: 1;">
+                    <input type="color" class="form-input" id="primaryColor" name="primaryColor" value="#1a1a1a" style="width: 60px; height: 48px; padding: 4px; cursor: pointer;" onchange="document.getElementById('primaryColorText').value = this.value">
+                  </div>
                 </div>
                 <div style="flex: 1; min-width: 150px;">
-                  <label class="form-label" for="secondaryColor">Secondary</label>
-                  <input type="color" class="form-input" id="secondaryColor" name="secondaryColor" value="#4a4a4a">
+                  <label class="form-label" for="secondaryColor">Secondary Color</label>
+                  <div style="display: flex; gap: var(--space-2); align-items: center;">
+                    <input type="text" class="form-input" id="secondaryColorText" name="secondaryColorText" placeholder="#4a4a4a" value="#4a4a4a" style="flex: 1;">
+                    <input type="color" class="form-input" id="secondaryColor" name="secondaryColor" value="#4a4a4a" style="width: 60px; height: 48px; padding: 4px; cursor: pointer;" onchange="document.getElementById('secondaryColorText').value = this.value">
+                  </div>
                 </div>
                 <div style="flex: 1; min-width: 150px;">
-                  <label class="form-label" for="accentColor">Accent</label>
-                  <input type="color" class="form-input" id="accentColor" name="accentColor" value="#2563eb">
+                  <label class="form-label" for="accentColor">Accent Color</label>
+                  <div style="display: flex; gap: var(--space-2); align-items: center;">
+                    <input type="text" class="form-input" id="accentColorText" name="accentColorText" placeholder="#2563eb" value="#2563eb" style="flex: 1;">
+                    <input type="color" class="form-input" id="accentColor" name="accentColor" value="#2563eb" style="width: 60px; height: 48px; padding: 4px; cursor: pointer;" onchange="document.getElementById('accentColorText').value = this.value">
+                  </div>
                 </div>
               </div>
             </div>

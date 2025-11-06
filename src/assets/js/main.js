@@ -85,6 +85,24 @@ function setupEventListeners() {
   if (languageSelect) {
     languageSelect.addEventListener('change', handleLanguageChange);
   }
+
+  // Sync color text inputs with color pickers
+  const colorTextInputs = ['primaryColorText', 'secondaryColorText', 'accentColorText'];
+  colorTextInputs.forEach(inputId => {
+    const textInput = document.getElementById(inputId);
+    const colorPickerId = inputId.replace('Text', '');
+    const colorPicker = document.getElementById(colorPickerId);
+    
+    if (textInput && colorPicker) {
+      textInput.addEventListener('input', function() {
+        const value = this.value.trim();
+        // Simple validation for hex colors
+        if (/^#[0-9A-Fa-f]{6}$/.test(value)) {
+          colorPicker.value = value;
+        }
+      });
+    }
+  });
 }
 
 // Initialize form fields with data
