@@ -1058,3 +1058,40 @@ document.getElementById('templateGallery')?.addEventListener('click', (e) => {
   }
 });
 
+// Touch/Swipe support for mobile
+let touchStartX = 0;
+let touchEndX = 0;
+let touchStartY = 0;
+let touchEndY = 0;
+
+const gallerySlider = document.getElementById('gallerySlider');
+if (gallerySlider) {
+  gallerySlider.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+    touchStartY = e.changedTouches[0].screenY;
+  }, { passive: true });
+
+  gallerySlider.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    touchEndY = e.changedTouches[0].screenY;
+    handleSwipe();
+  }, { passive: true });
+}
+
+function handleSwipe() {
+  const swipeThreshold = 50; // Minimum distance for swipe
+  const horizontalDiff = touchEndX - touchStartX;
+  const verticalDiff = Math.abs(touchEndY - touchStartY);
+  
+  // Only handle horizontal swipes (ignore if vertical scroll)
+  if (verticalDiff < 50) {
+    if (horizontalDiff > swipeThreshold) {
+      // Swipe right - go to previous slide
+      previousSlide();
+    } else if (horizontalDiff < -swipeThreshold) {
+      // Swipe left - go to next slide
+      nextSlide();
+    }
+  }
+}
+
